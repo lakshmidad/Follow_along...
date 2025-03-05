@@ -1,4 +1,4 @@
-## Follow Along Project: Milestone 1
+### Follow Along Project: Milestone 1
 
 # Project Overview
 This project is part of the Follow Along series to build a MERN stack e-commerce application. In Milestone 1, I learned:
