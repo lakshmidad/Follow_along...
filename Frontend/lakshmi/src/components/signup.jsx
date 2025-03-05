@@ -1,106 +1,175 @@
-import React from "react";
-import { FaRegEye } from "react-icons/fa6";
-import { FaRegEyeSlash } from "react-icons/fa6";
-import { useState } from "react";
+import React, { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import axios from "axios";
 
 function Signup(props) {
-  let [hide, sethide] = useState(true);
-  const handlehide = () => {
-    sethide(!hide);
+  let [hide, setHide] = useState(true);
+  let [hided, setHided] = useState(true);
+  let [err, setErr] = useState("");
+
+  const handleHide = () => {
+    setHide(!hide);
+  };
+  const handleHided = () => {
+    setHided(!hided);
   };
 
-  let [hided, sethided] = useState(true);
-  const handlehided = () => {
-    sethided(!hided);
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmpass: "",
+  });
+
+  const handleForm = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+    console.log(data);
+  };
+
+  const handleSubmit = async () => {
+    const { name, email, password, confirmpass } = data;
+    if (password !== confirmpass) {
+      setErr("Passwords do not match");
+      return;
+    }
+    if (!name || !email || !password || !confirmpass) {
+      setErr("Please fill all fields");
+      return;
+    }
+
+    try {
+      await axios
+        .post("http://localhost:8975/user/signup", {
+          name,
+          email,
+          password,
+        })
+        .then((response) => console.log(response.data));
+      console.log("Successfully registered");
+    } catch (error) {
+      console.log(error);
+      setErr(resizeBy.data.message);
+    }
   };
 
   return (
     <>
-      <div className="border-2 w-[500px] mt-10 ml-15">
-        <h1 className="text-3xl font-bold text-center">Create an Account</h1>
+      <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="w-full sm:w-[400px] bg-white p-8 rounded-lg shadow-md">
+          <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
+            Create an Account
+          </h1>
 
-        <div className="w-7/10 h-120 m-auto mt-10 mb-10 shadow-lg">
-          <label htmlFor="" className="block ml-10 mt-10">
+          {err && (
+            <div className="bg-red-200 text-red-800 p-2 rounded-md mb-4 text-center">
+              {err}
+            </div>
+          )}
+
+          <label htmlFor="name" className="block text-gray-600 font-medium mb-2">
             Name
           </label>
           <input
+            id="name"
+            name="name"
             type="text"
-            className="border-1 w-8/10 block m-auto h-8 rounded-md"
+            value={data.name}
+            onChange={handleForm}
+            className="w-full p-3 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <label htmlFor="" className="block ml-10 mt-10">
+
+          <label htmlFor="email" className="block text-gray-600 font-medium mb-2">
             Email address
           </label>
           <input
-            type="text"
-            className="border-1 w-8/10 block m-auto h-8 rounded-md"
+            id="email"
+            name="email"
+            type="email"
+            value={data.email}
+            onChange={handleForm}
+            className="w-full p-3 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <label htmlFor="" className="block ml-10 mt-5 ">
+
+          <label htmlFor="password" className="block text-gray-600 font-medium mb-2">
             Password
           </label>
-          <div className="flex  w-8/10 m-auto">
+          <div className="relative">
             <input
+              id="password"
+              name="password"
               type={hide ? "password" : "text"}
-              className="border-1 w-[140%] block m-auto h-8 rounded-md rounded-bl-md"
+              value={data.password}
+              onChange={handleForm}
+              className="w-full p-3 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-
-            {hide ? (
-              <FaRegEye
-                className=" w-[12%] h-5 mt-1 ml-1"
-                onClick={handlehide}
-              />
-            ) : (
-              <FaRegEyeSlash
-                className="w-[12%] h-5 mt-1 ml-1"
-                onClick={handlehide}
-              />
-            )}
+            <button
+              type="button"
+              onClick={handleHide}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+            >
+              {hide ? (
+                <FaRegEye size={20} />
+              ) : (
+                <FaRegEyeSlash size={20} />
+              )}
+            </button>
           </div>
 
-          <label htmlFor="" className="block ml-10 mt-5 ">
+          <label htmlFor="confirmpass" className="block text-gray-600 font-medium mb-2">
             Confirm Password
           </label>
-          <div className="flex  w-8/10 m-auto">
+          <div className="relative">
             <input
+              id="confirmpass"
+              name="confirmpass"
               type={hided ? "password" : "text"}
-              className="border-1 w-[140%] block m-auto h-8 rounded-md rounded-bl-md"
+              value={data.confirmpass}
+              onChange={handleForm}
+              className="w-full p-3 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-
-            {hided ? (
-              <FaRegEye
-                className="w-[12%] h-5 mt-1 ml-1"
-                onClick={handlehided}
-              />
-            ) : (
-              <FaRegEyeSlash
-                className="w-[12%] h-5 mt-1 ml-1"
-                onClick={handlehided}
-              />
-            )}
+            <button
+              type="button"
+              onClick={handleHided}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+            >
+              {hided ? (
+                <FaRegEye size={20} />
+              ) : (
+                <FaRegEyeSlash size={20} />
+              )}
+            </button>
           </div>
 
-          <div className="flex m-auto mt-5  w-[80%]  justify-between ">
-            <div className="flex  w-[48%]">
-              <input type="checkbox" />
-              <label htmlFor="">Remember me</label>
+          <div className="flex justify-between items-center mb-4">
+            <div className="flex items-center">
+              <input type="checkbox" id="remember" className="mr-2" />
+              <label htmlFor="remember" className="text-gray-600">Remember me</label>
             </div>
-
-            {/* <h6 className="font-semibold text-blue-700">Forgot password</h6> */}
           </div>
 
           <button
-            type="submit"
-            className=" w-8/10 block m-auto bg-blue-500 rounded-m mt-5 h-8 rounded-md"
+            type="button"
+            onClick={handleSubmit}
+            className="w-full p-3 bg-blue-600 text-white font-semibold rounded-md mb-4 hover:bg-blue-700 transition"
           >
-            {" "}
             Signup
           </button>
 
-          <h6 onClick={props.x} className="ml-9">
-            Already have an account
-          </h6>
+          <div className="text-center">
+            <p className="text-gray-600">
+              Already have an account?{" "}
+              <span
+                onClick={props.x}
+                className="text-blue-600 cursor-pointer hover:underline"
+              >
+                Login
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </>
   );
 }
+
 export default Signup;

@@ -1,23 +1,32 @@
-import { useState } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Loginpage from "./pages/Loginpage"
-import Navbar from "./pages/Navbar";
-import Login from "./components/login";
-import Signup from "./components/signup";
-
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import './App.css'
+import Login from './pages/login'
+import Home from './pages/Home'
+import Navbar from './pages/Navbar'
+import Createproduct from './components/Createproduct'
+import SellerProductPage from "./pages/SellerProductPage"
 function App() {
+  
 
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/Login" element={<Loginpage />}></Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    <>
+      <BrowserRouter>
+        <Navbar/>
+       <Routes>
+            <Route  path="/"  element={<Home/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/create" element={<Createproudct/>}></Route>
+            <Route path="/modify" element={<SellerProcutPage/>}></Route>
+
+       </Routes>
+     </BrowserRouter>
+
+
+    </>
+  )
 }
 
-export default App;
+export default App
