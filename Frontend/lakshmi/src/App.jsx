@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Navbar from './pages/Navbar'
 import Createproduct from './components/Createproduct'
 import SellerProductPage from "./pages/SellerProductPage"
+import CreateProduct from './components/Createproduct'
 function App() {
   
 
@@ -18,8 +19,8 @@ function App() {
        <Routes>
             <Route  path="/"  element={<Home/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route path="/create" element={<Createproudct/>}></Route>
-            <Route path="/modify" element={<SellerProcutPage/>}></Route>
+            <Route path="/create" element={<Createproduct/>}></Route>
+            <Route path="/modify" element={<SellerProductPage/>}></Route>
 
        </Routes>
      </BrowserRouter>
