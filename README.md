@@ -93,3 +93,20 @@ This project is part  of the Follow Along series to build a MERN stack e-commerc
 • Enhancing database security by preventing password theft and ensuring compliance with security standards.
 
 • Updating the README file to document progress.
+
+
+
+## Follow Along Project: Milestone 7
+ 
+# Project Overview
+
+• we are going to create a backend endpoint for user login. In this lesson, the focus is on validating user credentials and verifying the encrypted password stored in the database.
+
+1.Create Login Endpoint:
+
+   • Accept user credentials (email/username and password).
+   • Retrieve the corresponding user from the database.
+2.Validate Password:
+
+   • Use bcrypt to hash the entered password.
+   • Compare it with the stored hashed password for authentication.
