@@ -110,3 +110,162 @@ This project is part  of the Follow Along series to build a MERN stack e-commerc
 
    • Use bcrypt to hash the entered password.
    • Compare it with the stored hashed password for authentication.
+
+
+## Follow Along Project: Milestone 8
+ 
+# Project Overview
+we will create a frontend card component for products and design a homepage to display these cards for each product.
+
+1.Create the Card Component:
+
+   • Design a reusable card component with props for product details (e.g., name, image, price).
+
+2.Design the Homepage Layout:
+
+   • Set up a grid layout or flexbox for displaying multiple cards neatly.
+
+   ## Follow Along Project: Milestone 9
+ 
+# Project Overview
+We will create a frontend form for taking products input. Let's dive in and understand what this all means!
+
+• Here we will create an form to input all the details of product 
+• This details will be eventually saved in database and will be displayed on products home page we created in previous milestone 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
