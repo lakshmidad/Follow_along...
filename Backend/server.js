@@ -1,41 +1,23 @@
-const express = require("express");
-const cors = require("cors")
-const app = express();
-app.use(express.json());
-const ErrorMiddleware= require("./middleware/error")
-const path=require("path")
-const cookieParser =require("cookie-parser")
-app.use(cookieParser())
+const {app} =require("./app")
+require("dotenv").config()
 
-app.use(cors({
-  origin:"http://localhost:5173",
-  credentials:true
-}))
+const connection =require("./db/connection")
 
-const {userRoute} = require('./controllers/userRoute');
-
-const productRouter = require("./controllers/productRoutes");
+const userRoute = require('./controllers/userRoute');
 
 
-
-app.get("/test", async (req, res) => {
-  res.send("hello.....");
-});
-
-
-console.log(path.join(__dirname, 'uploadproducts'))
+app.get("/test",async(req,res)=>{
+    res.send("hello......")
+})
 
 
-app.use('/profile-photo', express.static(path.join(__dirname, 'upload')));
-
-app.use('/products-photo', express.static(path.join(__dirname, 'uploadproducts')));
-
-app.use("/user",userRoute)
-app.use("/product", productRouter);
-
-
-
-
-app.use(ErrorMiddleware)
-
-module.exports = { app };
+const port = process.env.PORT
+app.listen(port,async()=>{
+    try {
+        await connection
+        console.log(`app is running on http://localhost:${port}`)
+    } catch (error) {
+         console.log(error)
+    }
+   
+})
