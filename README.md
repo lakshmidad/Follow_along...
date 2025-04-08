@@ -128,11 +128,21 @@ we will create a frontend card component for products and design a homepage to d
    ## Follow Along Project: Milestone 9
  
 # Project Overview
-In this We will create a frontend form for taking products input. Let's dive in and understand what this all means!
+In this We will create a frontend form for taking products input. 
 
 • Here we will create an form to input all the details of product 
 • This details will be eventually saved in database and will be displayed on products home page we created in previous milestone 
 
+## Follow Along Project: Milestone 10
+ 
+# Project Overview
+ we will create a mongoose schema for products and create and endpoint to store the product details. 
+ • In this we will learn how to write product schema 
+ • And how to create an endpoint to validate and store product details mongodb.
+• Define the structure of product data (e.g., name, description, price, image URL) using Mongoose. -Ensure each field has proper validation (e.g., required fields, correct data types).
+• Build a POST endpoint to receive product data.
+• Validate and save the product details to MongoDB.
+• Here validation ensures that only valid data is saved in the database, maintaining data integrity and preventing errors.
 
 
 
