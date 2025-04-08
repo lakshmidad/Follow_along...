@@ -13,7 +13,7 @@ This project is part of the Follow Along series to build a MERN stack e-commerce
 
 • Setting up a GitHub repository for project tracking.
 
-
+• Then push your code to your GitHub repository.
 ## Follow Along Project: Milestone 2
 
 # Project Overview
@@ -29,7 +29,7 @@ This project is part of the Follow Along series to build a MERN stack e-commerce
 
 • Enhancing development efficiency with optional extensions.
 
-
+• Then push your code to your GitHub repository.
 ## Follow Along Project: Milestone 3
  
 # Project Overview
@@ -45,7 +45,7 @@ This project is part of the Follow Along series to build a MERN stack e-commerce
 
 • Updating the README file to document progress.
 
-
+• Then push your code to your GitHub repository.
 ## Follow Along Project: Milestone 4
  
 # Project Overview
@@ -62,7 +62,7 @@ This project is part of the Follow Along series to build a MERN stack e-commerce
 
 • Updating the README file to document progress.
 
-
+• Then push your code to your GitHub repository.
 ## Follow Along Project: Milestone 5
  
 # Project Overview
@@ -78,7 +78,7 @@ This project is part of the Follow Along series to build a MERN stack e-commerce
 
 • Updating the README file to document progress.
 
-
+• Then push your code to your GitHub repository.
 ## Follow Along Project: Milestone 6
  
 # Project Overview
@@ -94,7 +94,7 @@ This project is part  of the Follow Along series to build a MERN stack e-commerc
 
 • Updating the README file to document progress.
 
-
+• Then push your code to your GitHub repository.
 
 ## Follow Along Project: Milestone 7
  
@@ -110,7 +110,7 @@ This project is part  of the Follow Along series to build a MERN stack e-commerc
 
    • Use bcrypt to hash the entered password.
    • Compare it with the stored hashed password for authentication.
-
+• Then push your code to your GitHub repository.
 
 ## Follow Along Project: Milestone 8
  
@@ -124,7 +124,7 @@ we will create a frontend card component for products and design a homepage to d
 2.Design the Homepage Layout:
 
    • Set up a grid layout or flexbox for displaying multiple cards neatly.
-
+• Then push your code to your GitHub repository.
    ## Follow Along Project: Milestone 9
  
 # Project Overview
@@ -132,6 +132,7 @@ In this We will create a frontend form for taking products input.
 
 • Here we will create an form to input all the details of product 
 • This details will be eventually saved in database and will be displayed on products home page we created in previous milestone 
+• Then push your code to your GitHub repository.
 
 ## Follow Along Project: Milestone 10
  
@@ -143,6 +144,7 @@ In this We will create a frontend form for taking products input.
 • Build a POST endpoint to receive product data.
 • Validate and save the product details to MongoDB.
 • Here validation ensures that only valid data is saved in the database, maintaining data integrity and preventing errors.
+• Then push your code to your GitHub repository.
 
 ## Follow Along Project: Milestone 11
  
@@ -152,7 +154,15 @@ we will make our home page that will display all the products dynamic. We will w
 • we receive data at frontend -How to display that data dynamically using product card created earlier.
 
 • From this we write an endpoint that will send all products data to frontend. In frontend write an function to get all the data display these data dynamically passing to product card component.
+• Then push your code to your GitHub repository.
+
+## Follow Along Project: Milestone 12
  
+# Project Overview
+we will make our My products page that will display all the products That i was added according to my mail. We will write an endpoint that will send all the products with mail that was saved in MongoDB using add products page earlier.
+• we write an endpoint that will send data by filtering with my mail and send data from mongodb 
+• we receive data at frontend -to display that data dynamically using product card created earlier
+• Then push your code to your GitHub repository.
 
 
 
