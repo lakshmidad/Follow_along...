@@ -144,7 +144,15 @@ In this We will create a frontend form for taking products input.
 • Validate and save the product details to MongoDB.
 • Here validation ensures that only valid data is saved in the database, maintaining data integrity and preventing errors.
 
+## Follow Along Project: Milestone 11
+ 
+# Project Overview
+we will make our home page that will display all the products dynamic. We will write an endpoint that will send all the data that was saved in mongodb using add products page earlier.
+• we write an endpoint that will send data from extract and send data from mongodb.
+• we receive data at frontend -How to display that data dynamically using product card created earlier.
 
+• From this we write an endpoint that will send all products data to frontend. In frontend write an function to get all the data display these data dynamically passing to product card component.
+ 
 
 
 
