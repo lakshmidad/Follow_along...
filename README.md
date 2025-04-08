@@ -128,7 +128,7 @@ we will create a frontend card component for products and design a homepage to d
    ## Follow Along Project: Milestone 9
  
 # Project Overview
-We will create a frontend form for taking products input. Let's dive in and understand what this all means!
+In this We will create a frontend form for taking products input. Let's dive in and understand what this all means!
 
 • Here we will create an form to input all the details of product 
 • This details will be eventually saved in database and will be displayed on products home page we created in previous milestone 
